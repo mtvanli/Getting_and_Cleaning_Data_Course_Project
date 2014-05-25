@@ -36,11 +36,16 @@ The original dataset included the following data files:
 
 'test/subject_test.txt': ID's of subjects in the training data
 
+
 The original data set can be downloaded from:
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
+
 ## A brief description of the script:
+
+For script to run R working directory must include the Samsung Data
+
 The run_analysis.R script merges data from a number of .txt files and produces a tidy data set which may be used for further analysis.
 
 The script does the followings:

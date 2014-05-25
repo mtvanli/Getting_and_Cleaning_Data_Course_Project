@@ -10,25 +10,25 @@ run_analysis <- function(){
     # with the average of each variable for each activity and each subject. 
     
     
-    ## The working directory must include the UCI HAR Dataset (Samsung Data)
+    ## The working directory must include the Samsung Data
     
     # Read Tables
     
-    ActivityLabels <- read.table("UCI HAR Dataset/activity_labels.txt", header=F)
+    ActivityLabels <- read.table("activity_labels.txt", header=F)
     
-    Features <- read.table("UCI HAR Dataset/features.txt", header=F)
+    Features <- read.table("features.txt", header=F)
     
-    X_train <- read.table("UCI HAR Dataset/train/X_train.txt",header=F)
+    X_train <- read.table("train/X_train.txt",header=F)
     
-    y_train <- read.table("UCI HAR Dataset/train/y_train.txt",header=F) 
+    y_train <- read.table("train/y_train.txt",header=F) 
     
-    subject_train <- read.table("UCI HAR Dataset/train/subject_train.txt",header=F)
+    subject_train <- read.table("train/subject_train.txt",header=F)
     
-    X_test  <- read.table("UCI HAR Dataset/test/X_test.txt",header=F)
+    X_test  <- read.table("test/X_test.txt",header=F)
     
-    y_test  <- read.table("UCI HAR Dataset/test/y_test.txt",header=F)
+    y_test  <- read.table("test/y_test.txt",header=F)
     
-    subject_test <- read.table("UCI HAR Dataset/test/subject_test.txt",header=F)
+    subject_test <- read.table("test/subject_test.txt",header=F)
       
     # Extract column names
     colnames(X_train) <- Features$V2
