@@ -1,12 +1,10 @@
 ## Getting_and_Cleaning_Data_Course_Project
 ========================================
 
-## About the R script
-
+## About the project:
 
 The run_analysis.R script reads data from the "Human Activity Recognition 
-Using Smartphones Dataset Version 1.0" and produces a new tidy dataset 
-which may be used for further analysis.
+Using Smartphones Dataset Version 1.0" and produces a new tidy dataset.
 
 The data in the "Human Activity Recognition Using Smartphones Dataset 
 Version 1.0" have been taken from experiments carried out with a group of 30 
@@ -38,15 +36,36 @@ The original dataset included the following data files:
 
 'test/subject_test.txt': ID's of subjects in the training data
 
-
-
 The original data set can be downloaded from:
+
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+## A brief description of the script:
+The run_analysis.R script merges data from a number of .txt files and produces a tidy data set which may be used for further analysis.
+
+The script does the followings:
+
+It reads all required data and labels from the .txt files
+
+It then extracts the variable names from the Features.txt to later use as field names in the merged data
+
+It replaces descriptive activity names to name the activities in the data set (i.e replace 1-6 with WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, 
+SITTING, STANDING, LAYING)
+
+It merges the training and the test sets to create one data set.
+
+It relabels the last two columns of the merged data set as "Activity" and "Subject"
+
+It extracts only the measurements on the mean and standard deviation for each measurement.
+
+It tidies up the field names by clearing brackets () from the column names. ( I think () make the text look messy)
+
+Finally it creates a tidy data set called "tidyDataSet.txt" containing the average of filtered variables for each activity and each subject. 
+
+A description of the "tidyDataSet.txt" file may be found in the "CodeBook.md" file.
 
 ## Acknowledgements:
 
 [1] Davide Anguita, Alessandro Ghio, Luca Oneto, Xavier Parra and Jorge L. Reyes-Ortiz. Human Activity Recognition on Smartphones using a Multiclass Hardware-Friendly Support Vector Machine. International Workshop of Ambient Assisted Living (IWAAL 2012). Vitoria-Gasteiz, Spain. Dec 2012
-
-This dataset is distributed AS-IS and no responsibility implied or explicit can be addressed to the authors or their institutions for its use or misuse. Any commercial use is prohibited.
 
 Jorge L. Reyes-Ortiz, Alessandro Ghio, Luca Oneto, Davide Anguita. November 2012.
