@@ -49,12 +49,14 @@ It reads all required data and labels from the .txt files
 
 It then extracts the variable names from the Features.txt to later use as field names in the merged data
 
-It replaces descriptive activity names to name the activities in the data set (i.e replace 1-6 with WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, 
-SITTING, STANDING, LAYING)
-
 It merges the training and the test sets to create one data set.
 
-It relabels the last two columns of the merged data set as "Activity" and "Subject"
+It relabels the last columns of the merged data set as "Subject"
+
+It merges the Activity Labels with the mergedData to get the descriptive activity names in the dataset(i.e replace 1-6 with WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, 
+SITTING, STANDING, LAYING). 
+
+It relabels the new last columns of as "Activity" and removes the Activity numbers. 
 
 It extracts only the measurements on the mean and standard deviation for each measurement.
 

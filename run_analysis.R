@@ -33,10 +33,6 @@ run_analysis <- function(){
     # Extract column names
     colnames(X_train) <- Features$V2
     colnames(X_test)  <- Features$V2
-     
-    # Use descriptive activity names to name the activities in the data set
-    y_train <- merge(y_train,ActivityLabels)[2]
-    y_test <- merge(y_test,ActivityLabels)[2]
     
     # Merge the training and the test sets to create one data set.
     train_Merged <- cbind(X_train,y_train,subject_train)
@@ -44,8 +40,11 @@ run_analysis <- function(){
     mergedData <- rbind( train_Merged, test_Merged)
     
     # Appropriately label the data set 
-    colnames(mergedData)[562] <- "Activity"
-    colnames(mergedData)[563] <- "Subject"
+    # Use descriptive activity names to name the activities in the data set
+    colnames(mergedData)[563] <- "Subject" 
+    mergedData<-merge(mergedData,ActivityLabels)
+    mergedData<-mergedData[-1]
+    colnames(mergedData)[563] <- "Activity"
     
     # Extract only the measurements on the mean and standard deviation 
     # for each measurement.
