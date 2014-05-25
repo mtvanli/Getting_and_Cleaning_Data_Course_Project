@@ -50,24 +50,24 @@ The run_analysis.R script merges data from a number of .txt files and produces a
 
 The script does the followings:
 
-It reads all required data and labels from the .txt files
+* It reads all required data and labels from the .txt files
 
-It then extracts the variable names from the Features.txt to later use as field names in the merged data
+* It then extracts the variable names from the Features.txt to later use as field names in the merged data
 
-It merges the training and the test sets to create one data set.
+* It merges the training and the test sets to create one data set.
 
-It relabels the last columns of the merged data set as "Subject"
+* It relabels the last columns of the merged data set as "Subject"
 
-It merges the Activity Labels with the mergedData to get the descriptive activity names in the dataset(i.e replace 1-6 with WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, 
+* It merges the Activity Labels with the mergedData to get the descriptive activity names in the dataset(i.e replace 1-6 with WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, 
 SITTING, STANDING, LAYING). 
 
-It relabels the new last columns of as "Activity" and removes the Activity numbers. 
+* It relabels the new last columns of as "Activity" and removes the Activity numbers. 
 
-It extracts only the measurements on the mean and standard deviation for each measurement.
+* It extracts only the measurements on the mean and standard deviation for each measurement.
 
-It tidies up the field names by clearing brackets () from the column names. ( I think () make the text look messy)
+* It tidies up the field names by clearing brackets () from the column names. ( I think () make the text look messy)
 
-Finally it creates a tidy data set called "tidyDataSet.txt" containing the average of filtered variables for each activity and each subject. 
+* Finally it creates a tidy data set called "tidyDataSet.txt" containing the average of filtered variables for each activity and each subject. 
 
 A description of the "tidyDataSet.txt" file may be found in the "CodeBook.md" file.
 
