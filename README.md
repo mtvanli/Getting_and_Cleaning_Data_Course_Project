@@ -1,7 +1,7 @@
 ## Getting_and_Cleaning_Data_Course_Project
 ========================================
 
-# Coursera Getting and Cleaning Data Course Repo
+## About the R script
 
 
 The run_analysis.R script reads data from the "Human Activity Recognition 
